@@ -2,7 +2,7 @@
 
 默认 `./start.sh app` 不加载本目录的实验。原AppFw已自然从`create_screen(0x315)`推进到完整语言选择页`0x12e`；原资源解压及72次GPE COPY实际生成标题、语言列表、选中框及图标。AP帧consumer读取原bitmap实际像素、保存并读回后回复原完成，已观察到帧序号256；11条有限连接、原声效表与显示配置均已消费。新增`--skip-setup`可直接进入原拍摄主界面，实际原像素及帧消费已通过；交互按键、CMOS和拍照录像仍未验证。
 
-[查看直接进入的原拍摄UI](../../../validation/evidence/2026-11-04-direct-shooting-ui.png) · [语言页对照](../../../validation/evidence/2026-11-04-original-language-ui.png)（均直接转换QMP读回的原bitmap）。
+[原拍摄UI黑底预览](../../../validation/evidence/2026-11-04-direct-shooting-ui-preview.png) · [原RGBA透明图](../../../validation/evidence/2026-11-04-direct-shooting-ui.png) · [语言页对照](../../../validation/evidence/2026-11-04-original-language-ui.png)。透明图保留原bitmap全部通道；黑底图仅供展示，避免查看器把透明区域衬成白色。`MENU`设置菜单尚无经验证截图。
 
 最新原线程定位与旧判断更正见
 [2026-11-04 原 UI 初始化链](../../../report/2026-11-03-a7m4-qemu-bringup/2026-11-04-original-ui-chain.md)。
@@ -48,7 +48,15 @@ python3 runtime/analysis/experimental/run-ui-trace.py \
 | `dig-level-device.*` | 原selector3实际消费为无角度样本的虚拟订阅；交付失败回滚，不产生角度或采样ready |
 | `gpe-min/` | 原FillRect/BitBlit/StretchRotateBlit/Flush消费原bitmap；未知绘图格式记录并拒绝，原矩形批次仅观测；没有应用绘图请求就没有像素产物 |
 
-`--firmware-identity` 仅把经包摘要校验的实际 model/region 写入最小 FAT，guest RAM1 提供虚拟 `nflasha1`；host/guest 摘要逐轮比对。原 updater 初始化和版本查询读取该镜像与 dat4，不以版本 ACK 桩替代。原bitmap独立读回记录非零字节数并自动导出PNG；全零只算清屏，非零也需检查实际图像内容和帧提交。
+`--firmware-identity` 仅把经包摘要校验的实际 model/region 写入最小 FAT，guest RAM1 提供虚拟 `nflasha1`；host/guest 摘要逐轮比对。原 updater 初始化和版本查询读取该镜像与 dat4，不以版本 ACK 桩替代。原bitmap独立读回记录非零字节数，自动导出保留alpha的`bitmap-*.png`和不透明黑底`bitmap-*-preview.png`；全零只算清屏，非零也需检查实际图像内容和帧提交。可单独生成展示图：
+
+```bash
+python3 runtime/analysis/experimental/bitmap_preview.py \
+  runtime/analysis/menu-runs/<本轮目录>/bitmap-43a7b4100.bin \
+  /tmp/a7m4-preview.png --black-background
+```
+
+黑底预览按原alpha混合RGB，不绘制文字或控件；原透明PNG仍用于逐字节还原原bitmap。
 
 UPM 查询 `0x80924127 / 0x920111` 现在完全交给原服务。旧“显示状态”应答曾清零 BIS，导致原断言，已经删除。当前 `POWER_ON_RECORD_OK` 加上原 AppFw 接收的 BIS=1 原字节，证明该运行越过了这项错误；不证明整机硬件历史记录已还原。
 

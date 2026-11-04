@@ -1,6 +1,12 @@
 # A7M4 QEMU 运行证据
 
-最新[直接进入原拍摄UI PNG](2026-11-04-direct-shooting-ui.png)和[验收摘要](2026-11-04-direct-shooting-ui.json)来自`ui-trace-20261104-163258`。`--skip-setup`经原API读回设置完成态及原时钟后，原屏`315→355→351→0`，语言/触摸教学页均未出现。截图为原bitmap字节转换，显示`NO CARD`、`J-FINE 14M`、`AF-S`与原拍摄控件；没有CMOS预览或成片验收。详情见[首设跳过报告](../../report/2026-11-03-a7m4-qemu-bringup/2026-11-04-skip-first-setup.md)。
+![原厂拍摄UI黑底预览](2026-11-04-direct-shooting-ui-preview.png)
+
+上图将原RGBA图层合成到不透明黑底，供GitHub等查看器展示；[原透明PNG](2026-11-04-direct-shooting-ui.png)和原bitmap摘要保留不变。透明图的中心像素为`RGBA=(0,0,0,0)`，查看器用白底时会显示为白色。黑底预览不代表已恢复CMOS图像。
+
+现有截图覆盖原拍摄界面与语言选择页；`MENU`设置菜单尚无经验证截图。
+
+最新[直接进入原拍摄UI原透明PNG](2026-11-04-direct-shooting-ui.png)和[验收摘要](2026-11-04-direct-shooting-ui.json)来自`ui-trace-20261104-163258`。`--skip-setup`经原API读回设置完成态及原时钟后，原屏`315→355→351→0`，语言/触摸教学页均未出现。截图为原bitmap字节转换，显示`NO CARD`、`J-FINE 14M`、`AF-S`与原拍摄控件；没有CMOS预览或成片验收。详情见[首设跳过报告](../../report/2026-11-03-a7m4-qemu-bringup/2026-11-04-skip-first-setup.md)。
 
 2026-11-04 的[原厂语言页PNG](2026-11-04-original-language-ui.png)和[内容摘要](2026-11-04-original-language-ui.json)来自实验运行`ui-trace-20261104-160330`。原线程自然创建`0x315→0x12e`，7个原资源解压、72次GPE COPY和2次Flush均实际执行。PNG直接转换QMP读回的原bitmap，614400B、355155B非零；没有主机重绘语言文字或控件。
 

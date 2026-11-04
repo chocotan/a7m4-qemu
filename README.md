@@ -22,8 +22,17 @@ A7C2、FX30 和 ZV-E10 QEMU 运行时。
 | 稳定性 | 当前 35 秒窗口内无 kernel crash、无 guest abort/exception dump；应用保持运行并周期性重试 `0x86f` |
 | 未完成 | 按键交互和原bitmap的QEMU窗口呈现；完整CP/PCIe、CMOS、镜头、AF、编码、拍照/录像、虚拟SD |
 
-[查看原拍摄UI PNG](validation/evidence/2026-11-04-direct-shooting-ui.png)及[跳过首设报告](report/2026-11-03-a7m4-qemu-bringup/2026-11-04-skip-first-setup.md)。原[语言页对照PNG](validation/evidence/2026-11-04-original-language-ui.png)仍保留。历史控制台与摘要见 [`validation/evidence/`](validation/evidence/)。运行目录
-`runtime/analysis/menu-runs/` 是本机私有产物，不入库。
+原厂拍摄主界面（原 OSD 图层合成到黑底的展示预览）：
+
+![原厂拍摄主界面，黑底预览](validation/evidence/2026-11-04-direct-shooting-ui-preview.png)
+
+原厂语言选择页：
+
+![原厂语言选择页](validation/evidence/2026-11-04-original-language-ui.png)
+
+目前保存的是以上两类界面，按 `MENU` 打开的设置菜单尚未完成交互验证和截图。拍摄预览的黑色区域是展示底色，CMOS取景仍未实现。
+
+[原RGBA透明图](validation/evidence/2026-11-04-direct-shooting-ui.png)保留原像素和透明度，白色背景的查看器会把透明区域显示为白色；上面的黑底预览只改变展示底色。[跳过首设报告](report/2026-11-03-a7m4-qemu-bringup/2026-11-04-skip-first-setup.md)及历史控制台与摘要见 [`validation/evidence/`](validation/evidence/)。运行目录`runtime/analysis/menu-runs/`是本机私有产物，不入库。
 
 ## 复现
 

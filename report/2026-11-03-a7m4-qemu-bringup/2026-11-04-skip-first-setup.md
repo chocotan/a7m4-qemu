@@ -2,7 +2,9 @@
 
 `--skip-setup` 已在原 ILCE-7M4 6.02 AP 上验证：正常启动创建 `0x315 → 0x355 → 0x351 → 0`，没有语言页 `0x12e` 或触摸教学页 `0x1e9`。原 bitmap 显示 `NO CARD`、`J-FINE 14M`、`AF-S` 和拍摄控件，原 AP 帧消费者正常保存并读回像素后回复完成。
 
-[查看原拍摄 UI PNG](../../validation/evidence/2026-11-04-direct-shooting-ui.png) · [机器可读验收摘要](../../validation/evidence/2026-11-04-direct-shooting-ui.json)
+[查看原拍摄 UI 黑底预览](../../validation/evidence/2026-11-04-direct-shooting-ui-preview.png) · [原RGBA透明图](../../validation/evidence/2026-11-04-direct-shooting-ui.png) · [机器可读验收摘要](../../validation/evidence/2026-11-04-direct-shooting-ui.json)
+
+原透明图保留原始alpha，网页查看器可能衬成白底；黑底预览仅按alpha合成展示底色，不添加UI或取景内容。
 
 只验证拍摄界面显示及首设分支。取景区域仍黑色；CMOS、镜头、AF、按键交互、拍照录像和虚拟卡成片没有因此通过，`capture_verified=false`。PNG 直接转换 QMP 读回的原 bitmap；QEMU ramfb 窗口呈现仍是独立未验收项。
 

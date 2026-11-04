@@ -66,6 +66,23 @@ def test_original_bitmap_png_channels_and_length():
         bitmap_png(raw[:-1])
 
 
+def test_bitmap_black_background_preview_matches_alpha_composite():
+    from experimental.bitmap_preview import bitmap_png
+    from PIL import Image
+    raw = bytearray(614400)
+    raw[:10] = bytes.fromhex('0ff00f0fff0008f0000f')
+    original = Image.open(io.BytesIO(bitmap_png(raw)))
+    expected = Image.new('RGBA', original.size, (0, 0, 0, 255))
+    expected.alpha_composite(original)
+    preview = Image.open(io.BytesIO(bitmap_png(raw, black_background=True)))
+    assert preview.mode == 'RGB' and preview.size == original.size
+    assert preview.tobytes() == expected.convert('RGB').tobytes()
+    assert preview.getpixel((3, 0)) == (136, 0, 0)
+    assert preview.getpixel((4, 0)) == (0, 0, 0)
+    with pytest.raises(ValueError):
+        bitmap_png(raw[:-1], black_background=True)
+
+
 def test_official_source_manifest_is_complete():
     root = Path(__file__).resolve().parents[2] / 'source'
     sums = root / 'upstream/SOURCE-SHA256SUMS'

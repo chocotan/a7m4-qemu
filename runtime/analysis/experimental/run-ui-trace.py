@@ -353,8 +353,12 @@ def main():
         for bitmap in facts['original_bitmaps']:
             if bitmap['bytes'] == 614400:
                 path = run / bitmap['file']
-                path.with_suffix('.png').write_bytes(bitmap_png(path.read_bytes()))
+                raw = path.read_bytes()
+                path.with_suffix('.png').write_bytes(bitmap_png(raw))
                 bitmap['rgba4444_png'] = path.with_suffix('.png').name
+                preview = path.with_name(path.stem + '-preview.png')
+                preview.write_bytes(bitmap_png(raw, black_background=True))
+                bitmap['black_background_preview_png'] = preview.name
         if args.firmware_identity:
             guest_sums = re.findall(r'SHA2?-?256\(stdin\)= ([0-9a-f]{64})', text)
             facts['identity_readback_verified'] = metadata['identity_fat_sha256'] in guest_sums
