@@ -1,0 +1,66 @@
+2:[    0.059448] Linux version 4.9.337-scel (jp10239@dic-build-scm-u20-008) (gcc version 6.4.0 (20201211 (Sony CE Linux 14.0.1.0)) ) #1 SMP PREEMPT Sat Apr 18 02:42:38 JST 2026
+858:A7M4_GUEST_READY
+864:A7M4_SESSION_START
+870:MOD_OK devno=0
+875:MOD_OK osal_utm=0
+880:MOD_OK osal_uipc=0
+913:MOD_OK dma330=0
+942:MOD_OK ldec=0
+971:MOD_OK utimer=0
+1001:MOD_OK backup=0
+1155:MOD_OK osal_ulogio=0
+1159:MOD_OK input=0
+1163:MOD_OK ioexp=0
+1167:MOD_OK indctr=0
+1171:MOD_OK udate=0
+1175:MOD_OK stream=0
+1179:MOD_OK stream2=0
+1183:MOD_OK dmm=0
+1187:MOD_OK icdt=0
+1191:MOD_OK kikilog=0
+1193:[  174.060271] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+1194:[  174.088856] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1195:[  174.153161] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8f7
+1198:MOD_OK upm=0
+1199:[  174.516468] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+1200:[  174.539218] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1201:[  174.545722] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1202:[  174.552008] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1203:[  174.569110] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1204:[  174.582145] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1205:[  174.590508] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1209:MOD_OK grm_ma=0
+1213:MOD_OK mcmn_drv=0
+1217:MOD_OK codec_drv=0
+1222:A7M4_SESSION_MODULES_DONE
+1223:A7M4_SESSION_APP_STARTED
+1231: FixedAreaTop  : 10268000
+1232: FixedAreaSize : 0007C000
+1241:[  200.181602] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1242:[  200.189165] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1243:[  200.191816] liro: Unknown symbol pciatu_unmap (err 0)
+1244:[  200.195108] liro: Unknown symbol pciatu_map (err 0)
+1245:[  200.202127] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1246:[  200.208089] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+1247:CGL-VERSION: "20180404MCA"
+1252:[  203.102397] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x85c
+1253:[  203.112163] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x85c
+1254:[  203.278200] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x738
+1255:[  203.317267] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x7ec
+1265:[  210.701780] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x964
+1266:[  212.133245] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+1267:[  212.576594] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+1271:I/stella(   254): Created HeapAllocator: 0x7f84000920((nil))
+1272:I/stella(   254): Replaced log-hook: 0x0x7fb7dbf7d0 => 0x0x7fb7deb22c
+1273:    mpMemoryHeap on 0x0000000410524000-0x0000000410AE6040 (6037568) for 50-4194303 kbyte res.
+1274:   mpMemoryHeap2 on 0x0000000410AE6040-0x0000000410E26040 (3407872) for 0-50 kbyte res.
+5688:[  286.158901] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x15a
+5690:[  286.211135] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5691:[  317.480441] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5692:[  330.369834] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+5693:[  427.090855] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5694:[  843.739680] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5695:[  910.553747] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5696:[  966.775252] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5697:[ 1016.760804] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+5698:[ 1049.389882] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f

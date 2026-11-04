@@ -1,0 +1,30 @@
+{
+  "schema": "a7m4-qemu-evidence-v1",
+  "date": "2026-11-03",
+  "model": "0x1030081",
+  "version": "6.02",
+  "region": 0,
+  "package_sha256": "ad6df47a0a93a46336b9920a0d8891d0c766f8c96fa68ebda8685f6c21621188",
+  "kernel": "4.9.337-scel #1 SMP PREEMPT Sat Apr 18 02:42:38 JST 2026",
+  "profile": {"smp": 2, "autostart": true, "modules_loaded": 21},
+  "observed": {
+    "guest_ready": true,
+    "all_module_rc_zero": true,
+    "bootin_started": true,
+    "im_elf_fixed_area": true,
+    "stella_heap_allocator": true,
+    "mp_memory_heaps": true,
+    "liro_symbol_error": true,
+    "uipc_unregistered_sends": true,
+    "create_screen": false,
+    "kernel_crash": false,
+    "guest_abort_or_fault": false
+  },
+  "console_gzip": "2026-11-03-app-console.log.gz",
+  "console_sha256": "b9725d70a744f85da5f91b432ce05019b216788d04088decf69ee6278fa2562e",
+  "key_lines": "2026-11-03-app-key-lines.txt",
+  "screenshot": "2026-11-03-no-display.png",
+  "screenshot_note": "QMP screendump of the same run; no original UI was created, so ramfb still shows its boot placeholder.",
+  "capture_verified": false,
+  "physical_asic_compatibility_verified": false
+}

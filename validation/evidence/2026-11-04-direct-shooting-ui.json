@@ -1,0 +1,56 @@
+{
+  "run": "ui-trace-20261104-163258",
+  "scope": "isolated local QEMU; original AP and explicit functional device models",
+  "option": "--skip-setup",
+  "runtime_firmware": "ILCE-7M4 6.02 ALLLANG",
+  "original_screen_ids": [
+    "0x315",
+    "0x355",
+    "0x351",
+    "0x0"
+  ],
+  "first_setup_bypassed": true,
+  "language_page_created": false,
+  "touch_guide_created": false,
+  "original_setup_fields": {
+    "0x02cf0014": 0,
+    "0x01070140": 0,
+    "0x02cf1701": 1
+  },
+  "original_clock_readback_hex": "3000000000000000000000000000000002000000e5070101000002000000000000000000000000000000000000000000",
+  "clock_source": "original firmware UTC default 2021-01-01; native boot API, observed advancement 2 seconds",
+  "language": "official package existing value preserved",
+  "gpe_fill": 17,
+  "gpe_copy": 110,
+  "gpe_flush": 17,
+  "resource_lz_decoded": 21,
+  "resource_lz_failed": 0,
+  "bitmap": {
+    "file": "bitmap-43a7b4100.bin",
+    "bytes": 614400,
+    "sha256": "a5c7fe0103d7662fe23c0bde3c0190512e20393ae227ad234425c0a00e830a72",
+    "nonzero_bytes": 24226,
+    "rgba4444_png": "bitmap-43a7b4100.png"
+  },
+  "png": "2026-11-04-direct-shooting-ui.png",
+  "png_sha256": "9f87bba02b6e639e015da9b7eb5c404323ec668c9404792ed58588cbaf8367c9",
+  "pixel_export": "QMP readback; direct RGBA4444 conversion; all bitmap bytes independently recovered from PNG",
+  "visible_content": "Original shooting UI: NO CARD, J-FINE 14M, AF-S, shutter/AF and touch controls; black preview",
+  "osd_latest_persisted_sequence_observed": 256,
+  "osd_latest_ack_sequence_observed": 256,
+  "osd_consumer_failed": 0,
+  "has_exception": false,
+  "baseline_unchanged": true,
+  "normal_qmp_exit_and_temporary_root_cleanup": true,
+  "host_runtime_tests_passed": 9,
+  "c_model_selftests_passed": 18,
+  "capture_verified": false,
+  "live_cmos_preview_verified": false,
+  "physical_asic_compatibility_verified": false,
+  "remaining": [
+    "CMOS/lens/AF emulation",
+    "photo/video and storage acceptance",
+    "interactive controls acceptance",
+    "QEMU window presentation of original bitmap"
+  ]
+}

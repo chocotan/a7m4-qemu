@@ -1,0 +1,34 @@
+# 用户提供的固件与所有解包产物
+/source/upstream/*.tar.gz
+/source/upstream/*.tar.xz
+/source/upstream/*.rpm
+/BODYDATA.DAT
+/incoming/
+/runtime/bodydata-cache/
+/runtime/tmp/
+/runtime/sources/
+/source/vendor/*.tar.*
+/source/build/
+/source/build-programs.sha256
+/source/*.log
+/runtime/analysis/menu-root/
+/runtime/analysis/menu-root.cpio
+/runtime/analysis/menu-runs/
+/runtime/analysis/native-assets.json
+/runtime/analysis/ui-assets.json
+/runtime/analysis/ui-originals/
+/runtime/analysis/ui/
+/runtime/analysis/menu-root.rootfs/
+/runtime/analysis/menu-root.usr/
+/runtime/analysis/.native-assets-staging-*/
+/runtime/analysis/*.cpio
+/runtime/analysis/*.log
+/validation/*.log
+__pycache__/
+.pytest_cache/
+*.pyc
+*.core
+# 本机实验编译结果；源码和复现入口保留
+/runtime/analysis/experimental/**/*.o
+/runtime/analysis/experimental/**/*.ko
+/runtime/analysis/experimental/**/*.so
